@@ -24,4 +24,4 @@ set_target_properties(archiver PROPERTIES COMPILE_FLAGS ${Qt5Widgets_EXECUTABLE_
 target_link_libraries(archiver ${VibeGui_LIBRARIES} ${VibeWidgets_LIBRARIES})
 
 install(FILES archiver.desktop DESTINATION ${CMAKE_INSTALL_APPSDIR})
-install(TARGETS archiver DESTINATION ${CMAKE_INSTALL_PROGSDIR})
+install(TARGETS archiver DESTINATION ${CMAKE_INSTALL_FULL_PROGSDIR})
