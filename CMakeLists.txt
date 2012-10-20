@@ -16,7 +16,7 @@ set(ARCHIVER_VERSION_STRING "${ARCHIVER_VERSION_MAJOR}.${ARCHIVER_VERSION_MINOR}
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 # Installation directories
-include(MauiInstallDirs)
+include(HawaiiInstallDirs)
 
 # Make CPack available to easy generate binary packages
 include(CPack)
