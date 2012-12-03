@@ -75,12 +75,9 @@ GenericName[x-test]=xxArchiving Toolxx
 GenericName[zh_CN]=压缩归档工具
 GenericName[zh_TW]=壓縮工具
 Comment=Archives creation and management
-Exec=archiver
-TryExec=archiver
+Exec=hawaii-archiver
+TryExec=hawaii-archiver
 Icon=utilities-file-archiver
 Terminal=false
 Categories=Qt;Hawaii;Utility;Compression;
 MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-servicepack;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;application/x-cd-image;
-
-X-Hawaii-Identifier=org.maui.Archiver
-X-Hawaii-Version=0.0.0

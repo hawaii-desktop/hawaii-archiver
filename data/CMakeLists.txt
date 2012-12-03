@@ -1,1 +1,2 @@
-install(FILES archiver.desktop DESTINATION ${CMAKE_INSTALL_APPLICATIONSDIR})
+install(FILES hawaii-archiver.desktop
+    DESTINATION ${CMAKE_INSTALL_APPLICATIONSDIR})
