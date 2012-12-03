@@ -24,18 +24,17 @@
  * $END_LICENSE$
  ***************************************************************************/
 
-#include <VApplication>
+#include <QApplication>
 
 #include "archiverwindow.h"
 
 int main(int argc, char *argv[])
 {
-    VApplication app(argc, argv);
+    QApplication app(argc, argv);
     app.setApplicationName("Archiver");
     app.setApplicationVersion("0.0.0");
     app.setOrganizationDomain("maui-project.org");
-    app.setOrganizationName("Maui Project");
-    app.setIdentifier("org.maui.Archiver");
+    app.setOrganizationName("Hawaii");
     app.setWindowIcon(QIcon::fromTheme("utilities-file-archiver"));
 
     ArchiverWindow *window = new ArchiverWindow;
