@@ -48,4 +48,5 @@ if(NOT VibeWidgets_FOUND)
 endif()
 
 # Subdirectories
+add_subdirectory(data)
 add_subdirectory(src)
