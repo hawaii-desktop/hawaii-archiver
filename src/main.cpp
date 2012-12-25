@@ -25,11 +25,15 @@
  ***************************************************************************/
 
 #include <QApplication>
+#include <QLibraryInfo>
+#include <QStandardPaths>
+#include <QTranslator>
 
 #include "archiverwindow.h"
 
 int main(int argc, char *argv[])
 {
+    // Application setup
     QApplication app(argc, argv);
     app.setApplicationName("Archiver");
     app.setApplicationVersion("0.0.0");
@@ -37,6 +41,24 @@ int main(int argc, char *argv[])
     app.setOrganizationName("Hawaii");
     app.setWindowIcon(QIcon::fromTheme("utilities-file-archiver"));
 
+    // Locale name
+    const QString locale = QLocale::system().name();
+
+    // Translations
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + locale,
+                      QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&qtTranslator);
+
+    QTranslator translator;
+    QString localeDir = QStandardPaths::locate(
+                            QStandardPaths::GenericDataLocation,
+                            QLatin1String("hawaii-archiver/translations"),
+                            QStandardPaths::LocateDirectory);
+    translator.load(locale, localeDir);
+    app.installTranslator(&translator);
+
+    // Show window
     ArchiverWindow *window = new ArchiverWindow;
     window->show();
 

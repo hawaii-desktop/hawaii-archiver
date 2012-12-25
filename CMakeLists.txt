@@ -46,6 +46,13 @@ if(CMAKE_BUILD_TYPE MATCHES "^[Rr]elease$")
     add_definitions(-DQT_NO_DEBUG_OUTPUT)
 endif()
 
+# Find Qt
+set(QT_MIN_VERSION "5.0.0")
+find_package(Qt5LinguistTools REQUIRED)
+if(NOT Qt5LinguistTools_FOUND)
+    message(FATAL_ERROR "Qt5LinguistTools module is required!")
+endif()
+
 # Find Vibe libraries
 find_package(VibeWidgets REQUIRED)
 if(NOT VibeWidgets_FOUND)
