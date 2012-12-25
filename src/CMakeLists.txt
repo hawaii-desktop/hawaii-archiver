@@ -28,12 +28,8 @@ qt5_wrap_ui(UI_FILES ${UI_SOURCES})
 qt5_add_translation(QM_FILES ${QM_SOURCES})
 
 add_executable(hawaii-archiver ${SOURCES} ${UI_FILES} ${QM_FILES})
-set_target_properties(hawaii-archiver PROPERTIES
-    COMPILE_FLAGS ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS})
-target_link_libraries(hawaii-archiver
-    ${VibeGui_LIBRARIES}
-    ${VibeWidgets_LIBRARIES}
-)
+qt5_use_modules(hawaii-archiver Widgets)
+target_link_libraries(hawaii-archiver ${VibeWidgets_LIBRARIES})
 
 install(TARGETS hawaii-archiver DESTINATION ${CMAKE_INSTALL_BINDIR})
 install(FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_DATADIR}/hawaii-archiver/translations)

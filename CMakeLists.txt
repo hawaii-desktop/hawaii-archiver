@@ -1,10 +1,12 @@
 project(Archiver)
 
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 2.8.9)
 
-# Enable automoc and include current directory
-set(CMAKE_AUTOMOC ON)
+# Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+# Instruct CMake to run moc automatically when needed.
+set(CMAKE_AUTOMOC ON)
 
 # Set version
 set(ARCHIVER_VERSION_MAJOR 0)
@@ -17,6 +19,9 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 # Installation directories
 include(HawaiiInstallDirs)
+
+# Log features
+include(MacroLogFeature)
 
 # Add custom uninstall target
 configure_file(
@@ -47,18 +52,22 @@ if(CMAKE_BUILD_TYPE MATCHES "^[Rr]elease$")
 endif()
 
 # Find Qt
-set(QT_MIN_VERSION "5.0.0")
 find_package(Qt5LinguistTools REQUIRED)
 if(NOT Qt5LinguistTools_FOUND)
     message(FATAL_ERROR "Qt5LinguistTools module is required!")
 endif()
+macro_log_feature(Qt5LinguistTools_FOUND "Qt5LinguistTools" "Support for Qt5LinguistTools" "http://qt-project.org" "")
 
 # Find Vibe libraries
 find_package(VibeWidgets REQUIRED)
 if(NOT VibeWidgets_FOUND)
     message(FATAL_ERROR "VibeWidgets module is required!")
 endif()
+macro_log_feature(VibeWidgets_FOUND "VibeWidgets" "Support for VibeWidgets" "http://www.maui-project.org" "")
 
 # Subdirectories
 add_subdirectory(data)
 add_subdirectory(src)
+
+# Display featute log
+macro_display_feature_log()
