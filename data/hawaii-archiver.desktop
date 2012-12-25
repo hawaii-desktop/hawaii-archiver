@@ -72,6 +72,7 @@ GenericName[x-test]=xxArchiving Toolxx
 GenericName[zh_CN]=压缩归档工具
 GenericName[zh_TW]=壓縮工具
 Comment=Archives creation and management
+Comment[it]=Creazione e gestione di archivi
 Exec=hawaii-archiver
 TryExec=hawaii-archiver
 Icon=utilities-file-archiver
