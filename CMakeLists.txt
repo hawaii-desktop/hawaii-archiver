@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8.9)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-# Instruct CMake to run moc automatically when needed.
+# Instruct CMake to run moc automatically when needed
 set(CMAKE_AUTOMOC ON)
 
 # Set version
