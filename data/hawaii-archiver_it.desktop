@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Application
+Name=Archiver
+GenericName=Archiving Tool
+Comment=Archives creation and management
+Exec=hawaii-archiver
+TryExec=hawaii-archiver
+Icon=utilities-file-archiver
+Terminal=false
+Categories=Qt;Hawaii;Utility;Compression;
+MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-servicepack;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;application/x-cd-image;
+X-Hawaii-BugTracker=https://github.com/hawaii-desktop/archiver/issues
+X-Hawaii-BugTracker-NewIssue=https://github.com/hawaii-desktop/archiver/issues/new
+
+
+# Translations
+Comment[it]=Creazione e gestione di archivi
+GenericName[it]=Strumento di archiviazione
+Name[it]=Archiver
+Icon[it]=utilities-file-archiver

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="it" sourcelanguage="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.0">
 <context>
     <name>ArchiveModel</name>
     <message>
@@ -35,13 +33,13 @@
     <message>
         <location filename="../archivemodel.cpp" line="373"/>
         <source>Owner</source>
-        <comment>File&apos;s owner username</comment>
+        <comment>File's owner username</comment>
         <translation>Proprietario</translation>
     </message>
     <message>
         <location filename="../archivemodel.cpp" line="375"/>
         <source>Group</source>
-        <comment>File&apos;s group</comment>
+        <comment>File's group</comment>
         <translation>Gruppo</translation>
     </message>
     <message>
