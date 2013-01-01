@@ -1,7 +1,7 @@
 /****************************************************************************
  * This file is part of Archiver.
  *
- * Copyright (C) 2012 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+ * Copyright (C) 2012-2013 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  * Copyright (C) 2008-2009 Harald Hvaal <haraldhv@stud.ntnu.no>
  * Copyright (C) 2007 Henrique Pinto <henrique.pinto@kdemail.net>
  *
