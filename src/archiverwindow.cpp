@@ -138,7 +138,7 @@ void ArchiverWindow::slotHelpAbout()
 
     VAboutDialog dialog(this);
     dialog.setDescription(tr("Archive manager."));
-    dialog.setCopyright(tr("Copyright (C) 2012 Pier Luigi Fiorini"));
+    dialog.setCopyright(tr("Copyright (C) 2012-2013 Pier Luigi Fiorini"));
     dialog.setAuthors(authors);
     dialog.setLink(QUrl("http://www.maui-project.org"));
     dialog.exec();

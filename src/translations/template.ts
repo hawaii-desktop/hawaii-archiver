@@ -251,7 +251,7 @@
     </message>
     <message>
         <location filename="../archiverwindow.cpp" line="141"/>
-        <source>Copyright (C) 2012 Pier Luigi Fiorini</source>
+        <source>Copyright (C) 2012-2013 Pier Luigi Fiorini</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

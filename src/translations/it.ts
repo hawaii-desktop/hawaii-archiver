@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="it">
 <context>
     <name>ArchiveModel</name>
     <message>
@@ -33,13 +35,13 @@
     <message>
         <location filename="../archivemodel.cpp" line="373"/>
         <source>Owner</source>
-        <comment>File's owner username</comment>
+        <comment>File&apos;s owner username</comment>
         <translation>Proprietario</translation>
     </message>
     <message>
         <location filename="../archivemodel.cpp" line="375"/>
         <source>Group</source>
-        <comment>File's group</comment>
+        <comment>File&apos;s group</comment>
         <translation>Gruppo</translation>
     </message>
     <message>
@@ -249,8 +251,8 @@
     </message>
     <message>
         <location filename="../archiverwindow.cpp" line="141"/>
-        <source>Copyright (C) 2012 Pier Luigi Fiorini</source>
-        <translation>Copyright (C) 2012 Pier Luigi Fiorini</translation>
+        <source>Copyright (C) 2012-2013 Pier Luigi Fiorini</source>
+        <translation type="unfinished">Copyright (C) 2012 Pier Luigi Fiorini {2012-2013 ?}</translation>
     </message>
 </context>
 </TS>
