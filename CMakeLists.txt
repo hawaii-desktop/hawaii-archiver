@@ -59,10 +59,11 @@ endif()
 macro_log_feature(Qt5LinguistTools_FOUND "Qt5LinguistTools" "Support for Qt5LinguistTools" "http://qt-project.org" "")
 
 # Find Vibe libraries
+find_package(VibeCore REQUIRED)
+find_package(VibeGui REQUIRED)
 find_package(VibeWidgets REQUIRED)
-if(NOT VibeWidgets_FOUND)
-    message(FATAL_ERROR "VibeWidgets module is required!")
-endif()
+macro_log_feature(VibeCore_FOUND "VibeCore" "Support for VibeCore" "http://www.maui-project.org" "")
+macro_log_feature(VibeGui_FOUND "VibeGui" "Support for VibeGui" "http://www.maui-project.org" "")
 macro_log_feature(VibeWidgets_FOUND "VibeWidgets" "Support for VibeWidgets" "http://www.maui-project.org" "")
 
 # Subdirectories
