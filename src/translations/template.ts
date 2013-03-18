@@ -5,7 +5,7 @@
     <name>ArchiveModel</name>
     <message>
         <location filename="../archivemodel.cpp" line="285"/>
-        <source>%1 folders, %2 filers</source>
+        <source>%1 folders, %2 files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
