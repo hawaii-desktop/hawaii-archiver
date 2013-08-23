@@ -18,7 +18,7 @@ set(ARCHIVER_VERSION_STRING "${ARCHIVER_VERSION_MAJOR}.${ARCHIVER_VERSION_MINOR}
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 # Installation directories
-include(HawaiiInstallDirs)
+include(GNUInstallDirs)
 
 # Log features
 include(MacroLogFeature)
@@ -52,19 +52,19 @@ if(CMAKE_BUILD_TYPE MATCHES "^[Rr]elease$")
 endif()
 
 # Find Qt
+find_package(Qt5Widgets REQUIRED)
+if(NOT Qt5Widgets_FOUND)
+    message(FATAL_ERROR "Qt5Widgets module is required!")
+endif()
+macro_log_feature(Qt5Widgets_FOUND "Qt5Widgets" "Support for Qt5Widgets" "http://qt-project.org" "")
 find_package(Qt5LinguistTools REQUIRED)
 if(NOT Qt5LinguistTools_FOUND)
     message(FATAL_ERROR "Qt5LinguistTools module is required!")
 endif()
 macro_log_feature(Qt5LinguistTools_FOUND "Qt5LinguistTools" "Support for Qt5LinguistTools" "http://qt-project.org" "")
 
-# Find Vibe libraries
-find_package(VibeCore REQUIRED)
-find_package(VibeGui REQUIRED)
-find_package(VibeWidgets REQUIRED)
-macro_log_feature(VibeCore_FOUND "VibeCore" "Support for VibeCore" "http://www.maui-project.org" "")
-macro_log_feature(VibeGui_FOUND "VibeGui" "Support for VibeGui" "http://www.maui-project.org" "")
-macro_log_feature(VibeWidgets_FOUND "VibeWidgets" "Support for VibeWidgets" "http://www.maui-project.org" "")
+# Find KArchive
+find_package(KArchive REQUIRED)
 
 # Subdirectories
 add_subdirectory(data)

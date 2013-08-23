@@ -33,9 +33,9 @@
 
 #include <QAbstractItemModel>
 
-class VArchive;
-class VArchiveDirectory;
-class VArchiveEntry;
+class KArchive;
+class KArchiveDirectory;
+class KArchiveEntry;
 
 class ArchiveNode;
 class ArchiveDirNode;
@@ -94,11 +94,11 @@ public:
 private:
     ArchiveDirNode *m_rootNode;
     QList<int> m_showColumns;
-    VArchive *m_archive;
+    KArchive *m_archive;
 
-    bool processDirectory(const VArchiveDirectory *dir,
+    bool processDirectory(const KArchiveDirectory *dir,
                           const QString &prefix = QString());
-    void createEntryFor(const VArchiveEntry *entry, const QString &prefix);
+    void createEntryFor(const KArchiveEntry *entry, const QString &prefix);
     void processEntry(ArchiveEntry entry);
     ArchiveDirNode *parentFor(const ArchiveEntry &entry);
     QModelIndex indexForNode(ArchiveNode *node);

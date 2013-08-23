@@ -38,8 +38,7 @@
 #include <QMimeDatabase>
 #include <QMimeType>
 
-#include <VArchive>
-#include <VFileString>
+#include <karchive.h>
 
 #include "archivemodel.h"
 
@@ -497,7 +496,7 @@ bool ArchiveModel::openArchive(const QString &fileName)
     }
 
     // Open the archive
-    m_archive = new VArchive(fileName);
+    m_archive = new KArchive(fileName);
     if (!m_archive->isOpen()) {
         if (!m_archive->open(QIODevice::ReadOnly))
             return false;
@@ -508,22 +507,22 @@ bool ArchiveModel::openArchive(const QString &fileName)
     return true;
 }
 
-bool ArchiveModel::processDirectory(const VArchiveDirectory *dir, const QString &prefix)
+bool ArchiveModel::processDirectory(const KArchiveDirectory *dir, const QString &prefix)
 {
     foreach(const QString & entryName, dir->entries()) {
-        const VArchiveEntry *entry = dir->entry(entryName);
+        const KArchiveEntry *entry = dir->entry(entryName);
         createEntryFor(entry, prefix);
 
         if (entry->isDirectory()) {
             QString newPrefix = (prefix.isEmpty() ? prefix : prefix + QLatin1Char('/')) + entryName;
-            processDirectory(static_cast<const VArchiveDirectory *>(entry), newPrefix);
+            processDirectory(static_cast<const KArchiveDirectory *>(entry), newPrefix);
         }
     }
 
     return true;
 }
 
-void ArchiveModel::createEntryFor(const VArchiveEntry *entry, const QString &prefix)
+void ArchiveModel::createEntryFor(const KArchiveEntry *entry, const QString &prefix)
 {
     ArchiveEntry e;
     e[FileName] = prefix.isEmpty() ? entry->name() : prefix + QLatin1Char('/') + entry->name();
@@ -536,7 +535,7 @@ void ArchiveModel::createEntryFor(const VArchiveEntry *entry, const QString &pre
     if (!entry->symLinkTarget().isEmpty())
         e[Link] = entry->symLinkTarget();
     if (entry->isFile())
-        e[Size] = static_cast<const VArchiveFile *>(entry)->size();
+        e[Size] = static_cast<const KArchiveFile *>(entry)->size();
     else
         e[Size] = 0;
 

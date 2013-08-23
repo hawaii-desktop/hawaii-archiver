@@ -26,8 +26,7 @@
 
 #include <QAction>
 #include <QFileDialog>
-
-#include <VAboutDialog>
+#include <QMessageBox>
 
 #include "archiverwindow.h"
 #include "ui_archiverwindow.h"
@@ -133,15 +132,7 @@ void ArchiverWindow::slotActionExtract()
 
 void ArchiverWindow::slotHelpAbout()
 {
-    QStringList authors;
-    authors << "Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>";
-
-    VAboutDialog dialog(this);
-    dialog.setDescription(tr("Archive manager."));
-    dialog.setCopyright(tr("Copyright (C) 2012-2013 Pier Luigi Fiorini"));
-    dialog.setAuthors(authors);
-    dialog.setLink(QUrl("http://www.maui-project.org"));
-    dialog.exec();
+    QMessageBox::about(this, "", tr("Archive manager."));
 }
 
 #include "moc_archiverwindow.cpp"
